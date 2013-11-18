@@ -58,10 +58,7 @@
 
   "All together now!"
   (= "Test Testerson, 123 Test Lane, Testerville, TX"
-     ((fn [names address]
-        (let
-          [[first-name last-name] names
-          {:keys [street-address city state]} address]
+     ((fn [[first-name last-name] {:keys [street-address city state]}]
         (apply str
                (interpose
                  ", "
@@ -72,5 +69,5 @@
                      last-name]))
                    street-address
                    city
-                   state)))))
+                   state))))
         ["Test" "Testerson"] test-address)))
