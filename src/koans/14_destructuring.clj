@@ -63,10 +63,7 @@
                (interpose
                  ", "
                  (list
-                   (apply str (interpose
-                     " "
-                     [first-name
-                     last-name]))
+                   (str first-name " " last-name)
                    street-address
                    city
                    state))))
